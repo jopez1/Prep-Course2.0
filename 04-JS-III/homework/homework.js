@@ -64,7 +64,7 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  let result = "".concat(...palabras);
+  let result = palabras.join(" ");
  return result
 }
 
@@ -89,11 +89,14 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
-  let suma = 0
+  /* let suma = 0
   for(let i = 0; i < numeros.length; i++){
     suma += numeros[i]
  }
- return suma
+ return suma */
+return numeros.reduce((acc, act) => 
+  acc + act
+ )
 }
 
 
@@ -113,13 +116,30 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-}
+    let elMasGrande = 0
+  for (let i = 0; i < numeros.length; i++) {
+    if(numeros[i] > elMasGrande){
+      elMasGrande = numeros[i]
+    }
+    
+  } 
+  return elMasGrande;
+
+ // return Math.max(...numeros)
+  }
 
 
-function multiplicarArgumentos() {
+function multiplicarArgumentos(argumentos) {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  let arguments = argumentos.Math.pow()
+  
+  if (!argumentos) {
+    return 0
+  }else if(argumentos){
+    return argumentos
+  }
 }
 
 
