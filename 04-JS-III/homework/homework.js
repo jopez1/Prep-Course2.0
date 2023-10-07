@@ -64,8 +64,7 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  let result = palabras.join(" ");
- return result
+  return palabras.join(" ") 
 }
 
 
@@ -129,27 +128,31 @@ function numeroMasGrande(numeros) {
   }
 
 
-function multiplicarArgumentos(argumentos) {
+function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-  /* let arguments = argumentos.Math.pow()
-  
-  if (!argumentos) {
-    return 0
-  }else if(argumentos){
-    return argumentos
-  } */
+  /* let arguments = a * b;
+    if (!arguments){
+        return 0;
+    }
+    
+    return arguments; */
+
 }
 
 //arreglo = [1, 50 , 18, 6]
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
+  let cajita =[];
     for (let i = 0; i < arreglo.length; i++) {
-      return arreglo[i] > 18
+    if(arreglo[i] > 18){
+       cajita.push(arreglo[i])
+    }
       
     }
+    return cajita.length;
 }
 /* domingo lunes ma mi ju vi sa
 *    1       2    3  4  5  6  7
@@ -175,37 +178,72 @@ function empiezaConNueve(n) {
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
 
-  var conversion = n.toString() = "980"
-   if (conversion[0] === 9 ) {
+  let conversion = n.toString()
+  if(conversion[0] === "9"){
     return true
-   }
-   return false
+  }
+ return false; 
 }
 
-
+//arreglo = [15,51,65,15] -> false - arreglo = [65,65,65] -> true
 function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
-  //Escribe tu código aquí  
+  //Escribe tu código aquí 
+  
+  for (let i = 0; i < arreglo.length; i++) {
+    for (let j = 0; j < arreglo.length; j++) {
+       if(arreglo[i] === arreglo[j]){
+           return true
+       }else{
+           return false
+       }
+    }
+    
+   }
   
 } 
-
-
+   //   0       1           2        3         4        5           6        7       8
+//["Marzo", "Diciembre", "Abril", "Junio", "Julio", "Noviembre", "Enero", "Mayo", "Febrero"];
 function mesesDelAño(array) {
   //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  let cajita = [];
+          for (let i = 0; i < array.length; i++) {
+            if(array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre"){
+                 cajita.push(array[i]);
+                 
+            }else if(array[i] === "Enero" && array[i] === "Marzo" && array[i] === "Noviembre"){
+                "No se encontraron los meses pedidos"
+            
+            }
+            
+            
+    
+          }
+          return cajita;
 }
 
-
+//[0,3,200]
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  let cajita = [];
+    for (let i = 0; i < array.length; i++) {
+     if (array[i] > 100) {
+      cajita.push(array[i])
+     }
+      
+    }
+    return cajita;
+
 }
 
-
+//escenario 1: numero = 3 + 2 + 2 .... = [23]
+//escenario 2: numero = 0 + 2 + 2 + 2 + 2 + 2 [10] .... -> "Se interrumpió la ejecución"
 function breakStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
   //Guardar cada nuevo valor en un array. 
@@ -214,6 +252,14 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  let array = [];
+    
+    while (numero < 11) {
+      numero = numero + 2;
+      array.push(numero);
+    }
+    return array;
+
 }
 
 
@@ -224,6 +270,9 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+
+
+
 }
 
 

@@ -107,7 +107,7 @@ describe('numeroMasGrande(numbers)', function() {
   });
 });
 
-xdescribe('multiplicarArgumentos()', function () {
+describe('multiplicarArgumentos()', function () {
   it('should return the product of all the arguments', function () {
     const product = multiplicarArgumentos(5, 5);
     const product2 = multiplicarArgumentos();
@@ -122,7 +122,7 @@ xdescribe('multiplicarArgumentos()', function () {
   });
 });
 
-xdescribe('cuentoElementos(arreglo)', function() {
+describe('cuentoElementos(arreglo)', function() {
   it('should return a counter with the total of numbers greater than 18', function() {
     expect(cuentoElementos([10, 10, 18, 21])).toBe(1);
     expect(cuentoElementos([97, 100, 190, 5, 7, 9])).toBe(3);
@@ -139,7 +139,7 @@ describe('diaDeLaSemana(numeroDeDia)', function() {
   });
 });
 
-xdescribe('empiezaConNueve(n))', function() {
+describe('empiezaConNueve(n))', function() {
   it('should return true or false in case the received number starts with nine', function() {
     expect(empiezaConNueve(98)).toBe(true);
     expect(empiezaConNueve(9)).toBe(true);
@@ -149,7 +149,7 @@ xdescribe('empiezaConNueve(n))', function() {
   });
 });
 
-xdescribe('todosIguales(arreglo)', function() {
+describe('todosIguales(arreglo)', function() {
   it('should return true if all the elements of the array are equal and false otherwise', function() {
     expect(todosIguales([20, 20, 20, 20 ])).toBe(true);
     expect(todosIguales([97, 100, 190, 9])).toBe(false);
@@ -158,7 +158,7 @@ xdescribe('todosIguales(arreglo)', function() {
   });
 });
 
-xdescribe('mesesDelAño(array)', function() {
+describe('mesesDelAño(array)', function() {
   it('should return a new array with the requested months', function() {
     var ok = ["Marzo", "Diciembre", "Abril", "Junio", "Julio", "Noviembre", "Enero", "Mayo", "Febrero"];
     var wrong = ["Marzo", "Diciembre", "Julio", "Noviembre"];
@@ -167,7 +167,7 @@ xdescribe('mesesDelAño(array)', function() {
   });
 });
 
-xdescribe('mayorACien(array)', function() {
+describe('mayorACien(array)', function() {
   it('should return an array with values grater than 100', function() {
     var integers = [100, 4, 56, 78, 200, 120, 7, 160, 148, 22];
     expect(mayorACien(integers)).toEqual([200, 120, 160, 148]);
